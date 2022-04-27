@@ -9,6 +9,13 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ItemEntrega {
 
-	private Long id;
+	private String id;
 	private String nome;
+
+	@Override
+	public String toString() {
+		return "ItemEntrega{" +
+				"nome='" + nome +
+				"}";
+	}
 }

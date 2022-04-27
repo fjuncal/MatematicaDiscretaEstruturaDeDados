@@ -2,9 +2,12 @@ package com.br.assessmentLp.impl.servicos.opcoes.op1;
 
 import java.util.Scanner;
 
+import com.br.assessmentLp.mock.CarregarCenariosMock;
 import com.br.assessmentLp.impl.servicos.MenuPrincipal;
 
 public class Opcao1 {
+
+	//static List<Local> listaLocal = new ArrayList<>();
 
 	@SuppressWarnings({ "resource" })
 	public static void opcao1Impl() {
@@ -13,9 +16,8 @@ public class Opcao1 {
 			Scanner scanner = new Scanner(System.in);
 			String menuPontoDeEntrega = "----------------- \n"
 					+ "INSERIR PONTO DE ENTREGA: \n"
-					+ "[1] - Inserir ponto de entrega \n"
-					+ "[2] - Remover ponto de entrega \n"
-					+ "[3] - Verificar os dados de um produto \n"
+//					+ "[1] - Inserir ponto de entrega \n"
+					+ "[1] - Mostrar pontos de entrega criados \n"
 					+ "[7] - Voltar \n"
 					+ "[0] - Sair";
 			System.out.println(menuPontoDeEntrega);
@@ -32,14 +34,8 @@ public class Opcao1 {
 		int opcao;
 		opcao = scanner.nextInt();
 		switch (opcao) {
-		case 1:
-			System.out.println("Inserir Volumes");
-			break;
-		case 2:
-			System.out.println("Remover volumes");
-			break;
-		case 3:
-			System.out.println("Verificar os dados de um produto");
+			case 1:
+				System.out.println(CarregarCenariosMock.getListaLocais());
 			break;
 		case 7:
 			MenuPrincipal.menu();

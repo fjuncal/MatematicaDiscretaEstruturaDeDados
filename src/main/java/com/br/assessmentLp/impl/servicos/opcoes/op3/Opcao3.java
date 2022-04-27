@@ -2,9 +2,12 @@ package com.br.assessmentLp.impl.servicos.opcoes.op3;
 
 import java.util.Scanner;
 
+import com.br.assessmentLp.mock.CarregarCenariosMock;
 import com.br.assessmentLp.impl.servicos.MenuPrincipal;
 
 public class Opcao3 {
+
+	//static List<Caminhao> listaCaminhoes = new ArrayList<>();
 
 	public static void opcao3Impl() {
 		int opcao = Integer.MIN_VALUE;
@@ -12,9 +15,9 @@ public class Opcao3 {
 			Scanner scanner = new Scanner(System.in);
 			String menuInserirCaminhao = "----------------- \n"
 					+ "ADICIONAR CAMINHÕES: \n"
-					+ "[1] - Inserir caminhão \n"
-					+ "[2] - Remover caminhão \n"
-					+ "[3] - Consultar um caminhão, listando seus pontos de entrega e itens a serem entregues por ponto de entrega \n"
+					//+ "[1] - Inserir caminhão \n"
+					//+ "[2] - Remover caminhão \n"
+					+ "[1] - Consultar um caminhão, listando seus pontos de entrega e itens a serem entregues por ponto de entrega \n"
 					+ "[7] - Voltar \n"
 					+ "[0] - Sair";
 			System.out.println(menuInserirCaminhao);
@@ -32,13 +35,7 @@ public class Opcao3 {
 		opcao = scanner.nextInt();
 		switch (opcao) {
 		case 1:
-			System.out.println("Inserir Caminhão");
-			break;
-		case 2:
-			System.out.println("Remover Caminhão");
-			break;
-		case 3:
-			System.out.println("Consultar Caminhão");
+			System.out.println(CarregarCenariosMock.getListaCaminhoes());
 			break;
 		case 7:
 			MenuPrincipal.menu();
@@ -53,5 +50,6 @@ public class Opcao3 {
 		}
 		return opcao;
 	}
+
 
 }
